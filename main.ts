@@ -1,3 +1,8 @@
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 
-server((req: Request) => new Response ("Hello World"));
+try {
+  server((req: Request) => new Response ("Hello World")); 
+}
+catch(err) {
+  console.log(err);
+}
